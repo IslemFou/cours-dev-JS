@@ -1,0 +1,23 @@
+************* Les types de variables *************
+
+Il existes plusieurs types de valeurs qu'on peut assigner,
+*** Les chaines de caractères "strings" phrases qui est entre des "" ou ''.
+*** Les nombre : 5 , 10 , 12.5 ...
+*** Les booleans : TRUE , FALSE.
+*** Les tableaux [array] : ["julien", 10].
+*** null
+*** class
+*** objets
+*** fonctions
+
+
+//// Le type string
+- on peut initialiser une chaine de caractère de plusieurs façons:
+1- avec des "" : 
+en JS, la convention de nommage est le "CamelCase": chaque nouveau mot de votre variable doit etre en majuscule.
+
+
+
+En guise de conclusion, afin de vérifier le type d'un variable on utilise la fonction "TYPEOF()".
+
+

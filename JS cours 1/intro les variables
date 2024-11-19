@@ -1,0 +1,16 @@
+******** Les Variables ******************
+
+Les variables sont des boîtes
+vous pouvez stocker ce que vous souhaiter.
+ on doit initialiser les variables, on l'initialise avec son nom (de votre choix).
+ puis, on lui attribut une valeur.
+ Pour déclarer une variable, on utilise un préfixe soit Let ou const ou var.
+ Attention ! : on utilise les préfixes, uniquement lors de l'initialisation
+ ex: var (c'est façon obselète).
+
+ La déclaration "const" permet de créer une constante accessible uniquement au lecture.
+ sa valeur, ne pourra pas etre modifié par des réaffectations ultérieures.
+
+ Une constante, ne peut pas être déclaré à nouveau.
+ dans la convention, on écrit les constantes en MAJUSCULES pour les reconnaîtres.
+ 

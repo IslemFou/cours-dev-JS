@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les types de variables</title>
+</head>
+<body>
+    
+    <script>
+//*****  Les diff types de valeurs ********
+
+//------------- Les strings-------------
+let chaine1 = "test1";
+let chaine2 = "test2";
+
+let monTexte ="cette variable possède T comme camelCase et il faut précéder cette variable avec let";
+let monTexte2 ='ceci est une phrases écrite aujourd\'hui avec simples cotes';
+let monTexte3 = 'Je sors lorsqu\'il fait beau';
+// l'antislash \' permet de s'échapper 
+// console.log(monTexte2);
+
+// Avec des backguotes `` (AltGr + 7) c simple et lisible pour l'utilisateur
+
+let bienvenue = `Àujourd'hui c'est le retour du Kader`;
+// console.log(bienvenue);
+
+const PRENOM = `Kader`;
+bienvenue = `Àujourd'hui c'est le retour de > ${PRENOM}`;
+// console.log(bienvenue);
+
+const PRENOM2 = `Hawa`;
+//  1er manière let monTexte4 = `Aujourd'hui je sors avec ${PRENOM} quand il fait beau`; (avec backtik)
+// deuxième manière let monTexte4 = "Aujourd'hui je sors avec" + PRENOM2 + "quand il fait beau";
+// 
+let monTexte4 = 'Aujourd\'hui je sors avec' + PRENOM2 + 'quand il fait beau';
+
+
+// --------------- Les types Numbers -----------------------
+let chiffre = 55;
+let negatif = -55;
+let decimal = 5.5;
+
+//----------------Les types booleans ------------------
+//il ne prend que deux valeurs, soit TRUE ou FALSE
+let choix = True;
+
+// En guise de conclusion, afin de vérifier le type d'un variable on utilise la fonction "TYPEOF()"
+console.log( typeof true);
+ console.log(typeof(decimal),decimal);
+ console.log(typeof(negatif),negatif);
+
+// --------------- Affichage ---------------
+// pour afficher le contenu de ma variable 
+document.write(montexte4);
+
+const SAUT = "\n";
+const SAUTL = "<br>";
+document.write(montexte4, SAUT, bienvenue);
+
+//---------------BOITE DE DIALOGUE ------------------
+alert ("Ceci est un message d'alert"); //Afficher une alerte dans une boite de dialogue
+confirm (" Voulez-vous confirmer ?"); // confirmer une action
+let monAge ;
+monAge = prompt("quel est votre age ?"); //une boite de dialogue qui vous demande votre age input>50 confirmer/annuler
+
+
+
+
+
+    </script>
+</body>
+</html>
