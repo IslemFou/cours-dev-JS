@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exos JS</title>
+
+    <style>
+        body {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // ----------EXO 1 - Déclaration des variables-------------
+
+        // num qui contient le nombre 255
+        // txt qui contient la chaîne de caractères 255
+        // bin (pour binaire ou binary) qui contient la valeur booléenne vraie
+        // flt (pour float décimal ou flottant) qui contient la valeur 7,23
+
+        // affichez les contenus des variables dans des console.log
+let NUM = 255;
+let txt = '255';
+let bin = true;
+let flt = 7.23;
+
+console.log(NUM , txt, bin, flt);
+console.log(typeof NUM, NUM);
+console.log(typeof txt, txt);
+console.log(typeof bin, bin);
+console.log(typeof flt, flt);
+
+        // ------------EXO 2---------------------
+        // A)- Appliquez à num l'opérateur d'incrémentation ++ (ce qui doit donner 256)
+NUM = ++ NUM;
+console.log(NUM); //256
+NUM ++
+console.log(NUM); //257
+        // B)- Concaténez à la chaîne txt la chaîne suivante : " est ici une chaîne de caractères."
+        // et la concaténation dans un document.write
+
+document.write(`${NUM}  est ici une chaîne de caractères.`);
+         // C)- Inversez la valeur logique de bin 
+bin = !true;
+console.log(typeof(bin),bin);
+console.log(!bin);
+let bin2 = true;
+console.info('bin2 '+ bin2);
+        // Ajouter à la variable flt la valeur de NUM
+flt = flt + NUM; //première façon
+console.log(`flt + NUM = ${flt}`);
+flt+= NUM; //deuxième façon 
+console.log(flt);
+
+
+
+
+         // --------------- EXO 3 -------------------
+
+        // num2 qui contient le nombre 23
+        // txt2 qui contient la chaîne de caractère 33
+        // Affichez le résultat de txt2 , num2 avec console.log
+        // Affichez le résultat de l'addition de num2 + txt2 avec console.log
+let NUM2 = 23;
+txt2 = "33";
+console.log(txt2 , NUM2);
+console.log(NUM2 + txt2);
+//on ne peut pas additionner une string et un number
+//sauf dans le cas de convertir
+txt2 = Number(txt2);
+console.log(NUM2 + Number(txt2));
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

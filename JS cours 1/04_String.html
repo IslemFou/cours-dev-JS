@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Strings</title>
+</head>
+<body>
+    <h1>Les Strings</h1>
+    <script>
+const PRENOM = "Alexandre";
+const NOM = "CAVET";
+document.write(PRENOM +' '+NOM+'<br>');
+document.write(`${PRENOM} ${NOM} <br>`);
+const PRENOM2 = "Ouarda";
+const NOM2 = "CHIED";
+document.write(`${PRENOM2} ${NOM2} <br>`);
+
+
+
+let a = 10;
+let b = 5;
+let c = "5";
+
+//document.write((a+b) + '<br>');
+document.write(`${a+b}` + '<br>');
+
+//document.write(a + c);
+document.write(`${a+c} <br>`);
+
+document.write(`<hr>`);
+
+//Excercice: Réalisez un prompt demandons son age à l'utilisateur, puis récupérer cette donnée et l'afficher de cette façon: "Vous avez xx ans"
+let age ;
+// age = prompt("entrez votre age : ");
+// alert(`Votre age est : ${age}`);
+document.write(`Vous avez ${age} ans<br>`);
+document.write("Vous avez " + age + " ans ! " + "<br>");
+
+document.write(`<hr>`);
+
+//incrementation
+let fruits = 'Pommes';
+console.log(fruits);
+
+fruits += 'fraises'; 
+console.log(fruits);//console: Pommefraises
+
+fruits += 'mangues'; 
+console.log(fruits);//console: Pommesfraisesmangues
+
+
+// exemple 2
+let Q;
+console.log(Q); //console : undefined (parceque la variable Q n'a pas de valeur, donc je peut la garder sans contenu mais elle restera indéfinie)
+//console.log(R); //console : erreur R is not defined (Affiche une erreur parceque la variable n'existe pas, n'a été jamais déclaré)
+
+console.clear();
+
+//CONVERSION String to number
+let NUMBER = '24' ;
+console.log(NUMBER); //Affiche 24
+console.log(typeof NUMBER , NUMBER); //string 24
+
+//pour convertir le string '24' en chiffre 24
+NUMBER = parseFloat(NUMBER); //parseFloat, number, parseInt
+console.log(typeof NUMBER , NUMBER); //number 24
+
+//pour convertir NUMBER vers String avec la fonction toString
+
+NUMBER = NUMBER.toString();
+console.log(typeof NUMBER , NUMBER); //string 24
+
+
+
+
+    </script>
+</body>
+</html>

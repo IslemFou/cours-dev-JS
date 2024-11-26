@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Tableaux</title>
+</head>
+<body>
+    <h1>Les Tableaux</h1>
+    <script>
+// ************** Les tableaux ***************
+//Les tableaux indexées
+let monTab = [];
+console.log(monTab);
+
+//deuxième façon
+let myArray = new Array; // new: mot clé pour instancier
+console.log(myArray);
+//my Array et monTab sont des tableaux qui peuvent contenir plusieurs informations
+
+//******Affecter des valeurs aux tableaux (plusieurs méthodes)*************
+
+
+
+//1ere méthode  a) déclaration d'un tableau
+let nosPrenoms = ["Andrei", "Roger", "Hawa", "Islem"];
+
+
+//Affiche toutes les données de mon tableau
+console.log(nosPrenoms);
+
+//b) Remplissage du tableau
+monTab[0] = "Yacine";
+monTab[1] = "Fayçal";
+monTab[2] = "Ouarda";
+monTab[3] = "Alpha";
+monTab[4] = "delma";
+monTab[10] = "Andrea";
+
+//Afficher le tableau
+console.log(monTab);
+
+//récupérer et afficher "ouarda" manuellement
+console.log(monTab[2]);
+
+
+//****** Création deux tableaux indexées multidimensionnel
+
+
+let listeDePrenom = ["kader", "Alexandre", "Bashir"];
+let listeDeNom = ["Ounadjela", "Graziani","Youcif"];
+let annuaire = [listeDePrenom,listeDeNom];
+
+console.log(annuaire);
+// console.table(annuaire);
+document.write(annuaire + '<br>');
+document.write(annuaire[0][0]+ ' '+ annuaire[1][0]+'<br>');
+document.write(annuaire[0][1]+ ' '+ annuaire[1][1]+'<br>');
+document.write('<hr>');
+
+// Un tableau dans un tableau
+
+let Tableau = 
+// 0
+[
+     //0     1      2
+    [
+        "prenom","nom", "tel"
+    ],
+    //1
+    [  //0        1         2
+        "Yacine","Djdiden","0265481000"
+    ]
+];
+console.log(Tableau);
+document.write(`Nom : ${Tableau[1][1]} <br>  PRENOM :${Tableau[1][0]} <br> Tel : ${Tableau[1][2]} <br>`);
+document.write('<hr>');
+
+//Objet
+let coordonnee = 
+{
+    prenom : "Mamadou",
+    nom : "Amadou",
+    age : "26",
+    tel : "05152025425"
+};
+
+console.log(coordonnee['prenom']);
+console.log(coordonnee.prenom);
+
+ 
+document.write(coordonnee['prenom']);
+document.write('<hr>');
+document.write(coordonnee.prenom);
+
+//Tableau multidimensionnel à deux dimensions
+
+let contact = 
+[
+    {prenom:"Andera", nom:"leo", telephone:"07011000110"},
+    {prenom:"Hawa", nom:"Kone", telephone:"07000222000"},
+    {prenom:"Alexandre", nom:"cavet", telephone:"060001100"}
+];
+
+console.log(contact);
+console.log(contact[1]['nom']); //kone
+console.log(contact[1].nom); //kone
+
+console.log(contact[0]['telephone']); //telephone Andrea
+
+
+//tableau à 4 dimensions
+
+let array4Dimensions =
+[
+    {
+        prenom:"Roger",
+        nom: "Davies",
+        coordonnees: 
+        {
+            email: "roger.davis@colombbus.org", 
+            tél : 
+            {
+                fixe: "0600011001",
+                fax: "02000110001",
+                port: 
+                {
+                    privee: "0700110000",
+                    pro: "0600011002"
+                }
+            },
+            adresse: 
+            {
+                ville: "Paris",
+                cp: "75010",
+                pays:
+                {
+                    code: "FR",
+                    nom:"FRANCE"
+                }
+            }
+        }
+    }
+]
+
+console.log(array4Dimensions);
+
+// afficher Roger et son email
+console.log(array4Dimensions[0].coordonnees.email);
+console.log(array4Dimensions[0]['coordonnees']['email']);
+
+//on veut récuperer le code
+console.log(array4Dimensions[0].coordonnees.adresse.pays.code); // récuperer le code de pays
+
+console.log(array4Dimensions[0]['coordonnees']['adresse']['pays']['code']);
+console.clear();
+
+//******* Les propriétés et les méthodes************
+
+
+let couleurs = ["Rouge", "Vert","Gris"];
+console.log(couleurs);
+console.log(couleurs.length); // ppté qui affiche la taille ou la longueur du tableau 
+
+let longueurTableau = couleurs.length; //création d'une variable qui prend comme valeur la longeur du tableau
+
+console.log(longueurTableau);
+
+
+//Les méthods
+//pour ajouter un element qui existe à la fin de mon tableau j'utilise la méthode"push()"
+couleurs.push("Violet"); //pusher !!
+console.log(couleurs);
+console.log(couleurs.length);
+
+
+//supprimer le dernier element du tableau couleurs "violet" avec la méthode pop(), cette méthode supprime le dernier
+couleurs.pop();
+console.log(couleurs);
+
+//pour ajouter un ou des élements au début du tableau, j'utilise la méthode "unshift()"
+couleurs.unshift("Rose","Orange");
+console.log(couleurs);
+
+//Pour ajouter, supprimer ou remplacer des éléments à n'importe où dans un tableau, j'utilise la méthode "splice()",
+/*La méthode splice() va prendre 3 paramètres(arguments): 
+- une position de départ: à partir d'où commance le changement
+- Le nombre d'élements à remplacer ou à enlever
+- Les éléments à ajouter au tableau
+
+*/
+couleurs.splice(1,0,"Marron","Noir");
+
+/* 
+1:position à partir de laquelle / 
+0 element à enlever/ 
+"Marron","Noir"  à rajouter
+*/
+
+console.log(couleurs); 
+//['Rose', 'Marron', 'Noir', 'Orange', 'Rouge', 'Vert', 'Gris']
+
+
+//on remplace le noir par le bleu
+couleurs.splice(2,1,"Bleu");
+console.log(couleurs);
+
+console.clear();
+
+//************Exemple***************
+let jourSemaines = ["Lundi","Mardi", "Mercredi", "Jeudi","Vendredi","Samedi","Dimanche"];
+let jourTravail10MW = jourSemaines.slice(0,5);
+//let jourTravail10MW = jourSemaines.slice(-2) ou (5); //samedi, dimanche
+
+console.log(jourSemaines);
+console.log(jourTravail10MW);
+
+
+
+    </script>
+</body>
+</html>
