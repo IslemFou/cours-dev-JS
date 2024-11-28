@@ -207,6 +207,11 @@ console.log(couleurs);
 
 console.clear();
 
+
+
+//Pour découper un tableau et en créé un autre, j'utilise la méthode slice()
+            //premier argument : La position de départ : où doit commence la découpe de notre tableau de départ/ si la position passée est un nombre négatif -> le début de la découpe sera calculé à partit de la fin du tableau de départ/ si aucune position de départ n'est passée, la découpe commencera depuis le début du tableau de départ.
+            //Deuxième argument : la position où doit s'arrêter la découpe du tableau de départ/ si la position passée est un nombre négatif, alors la fin de la découpe sera calculé à partir de le fin du tableau de départ / si aucune position de fin n'est passée, alors on récupera le tableau de départ jusqu'à la fin pour créer notre nouveau tableau
 //************Exemple***************
 let jourSemaines = ["Lundi","Mardi", "Mercredi", "Jeudi","Vendredi","Samedi","Dimanche"];
 let jourTravail10MW = jourSemaines.slice(0,5);
