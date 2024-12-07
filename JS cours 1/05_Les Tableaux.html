@@ -167,14 +167,19 @@ let longueurTableau = couleurs.length; //création d'une variable qui prend comm
 console.log(longueurTableau);
 
 
-//Les méthods
-//pour ajouter un element qui existe à la fin de mon tableau j'utilise la méthode"push()"
+
+
+//--------------------Les méthods------------------------------
+
+
+
+//pour ajouter un element à la fin de mon tableau j'utilise la méthode"push()"
 couleurs.push("Violet"); //pusher !!
 console.log(couleurs);
 console.log(couleurs.length);
 
 
-//supprimer le dernier element du tableau couleurs "violet" avec la méthode pop(), cette méthode supprime le dernier
+//supprimer le dernier element du tableau couleurs "violet" avec la méthode pop().
 couleurs.pop();
 console.log(couleurs);
 
@@ -219,8 +224,42 @@ let jourTravail10MW = jourSemaines.slice(0,5);
 
 console.log(jourSemaines);
 console.log(jourTravail10MW);
+document.write(`<br>`);
+document.write(`<hr>`);
+
+// ****************** join ***************
+// Pour chosir le séparateur entre les élements j'utilise la méthode join qui retourne une chaine de charactère qui a été créer en concaténons les differents valeurs d'un tableau. C'est impératif de stocker la chaine de caractère dans une autre variable.
+document.write(`Utilisation de join`);
 
 
+let contactCouleurs =couleurs.join(' - ');
+console.log(contactCouleurs);
+document.write(`<br> ${contactCouleurs}`);
+
+
+//*********** include 
+//Pour déterminer si un tableau contient une valeur précise, j'utilise la méthode include et je passe la valeur à rechercher "CSS" dans l'argument() de la méthode(la fonction).
+document.write(`<br>`);
+document.write(`<hr>`);
+document.write(`Utilisation de includes`);
+
+
+
+let languages = ["HTML", "CSS", "JS", 25];
+let verif = languages.includes("CSS"); // "CSS" different de "css" ATT. La méthode vérifie l'écriture
+console.log(verif); //true
+console.log(typeof verif); //boolean
+console.log(typeof languages); //object
+
+//************* LA FONCTION CONCAT ****************
+//Pour fusionner differents tableaux entre eux, afin de créer un noueau Tableau totalTableau, j'utilise la méthode concat. 
+document.write(`<br>`);
+document.write(`<hr>`);
+document.write(`Fusion des tableaux : CONCAT`);
+
+
+let totalTableau = languages.concat(couleurs,monTab,array4Dimensions);
+console.log(totalTableau);
 
     </script>
 </body>

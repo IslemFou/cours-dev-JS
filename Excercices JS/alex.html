@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="f">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices Conditions</title>
+</head>
+
+<body>
+    <script>
+        // Conditions
+
+        // Exercice 1
+
+        // let age = prompt("Saisisez votre âge :");
+        // if (age > 18) {
+        //     alert("Vous êtes majeur !");
+        // } else {
+        //     alert("Vous êtes mineur !")
+        // }
+
+        // Exercice 2
+
+        // let nbr1 = prompt("Choisissez le premier nombre.");
+        // let nbr2 = prompt("Choisissez le deuxième nombre.");
+        // let operateur = prompt(`Quel type d'opération (" + ", " - "," * "," / ")?`);
+        // console.log(operateur);
+        // let resultat;
+        // if (operateur === "+") {
+        //     resultat = nbr1 + nbr2;
+        // } else if (operateur === "-") {
+        //     resultat = nbr1 - nbr2;
+        // } else if (operateur === "*") {
+        //     resultat = nbr1 * nbr2;
+        // } else if (operateur === "/") {
+        //     resultat = nbr1 / nbr2;
+        // } else {
+        //     alert('Entrez un opérateur valide!')
+        // }
+        // alert(`Le résultat de ${nbr1} ${operateur} ${nbr2} est ${resultat}`);
+
+        // Execice 3
+
+        // const NOMBRE_SECRET = 7;
+
+        // let guess = prompt("Devinez le nombre secret!");
+        // if (guess == NOMBRE_SECRET) {
+        //     alert("Bravo, vous avez trouvé le nombre !");
+        // } else if (guess > NOMBRE_SECRET) {
+        //     alert("Trop grand !");
+        // } else {
+        //     alert("Trop petit !");
+        // }
+
+        // exercice 4
+
+        // let note = prompt("Saisisez une note (entre 0 et 20)");
+
+        // switch (true) {
+        //     case (note >= 0 && note <= 10):
+        //         alert("Insuffisant");
+        //         break;
+        //     case (note >= 11 && note <= 14):
+        //         alert("Passable");
+        //         break;
+        //     case (note >= 15 && note <= 17):
+        //         alert('Bien');
+        //         break;
+        //     case (note >= 18 && note <= 20):
+        //         alert("Excellent");
+        //         break;
+        //     default:
+        //         alert("Note invalide !")
+        //         break;
+        // }
+
+        // exercice 5
+
+        // let platPref = prompt("Quel est votre plat préféré? (pizza, sushi, steak, salade)")
+        // platPref = platPref.toLowerCase();
+        // console.log(platPref);
+
+        // switch (platPref) {
+        //     case 'pizza':
+        //         alert("Pizza : un excellent choix pour les amateurs de fromage!");
+        //         break;
+        //     case 'sushi':
+        //         alert("Sushi : une option saine et délicieuse !");
+        //         break;
+        //     case 'steak':
+        //         alert("Steak : parfait pour les amateurs de viande !");
+        //         break;
+        //     case 'salade':
+        //         alert("Salade : un choix équilibré et léger !");
+        //         break;
+        //     default:
+        //         alert("Désolé, je ne connais pas ce plat.");
+
+
+        // }
+
+        // Exercice 6
+
+        let couleur = prompt("Choisisez votre couleur préférée parmi le rouge, le bleu et le vert")
+        couleur = couleur.toLowerCase();
+        let age = prompt("Quel est votre âge?")
+
+        switch (couleur) {
+            case 'rouge':
+                alert("Rouge : Vous êtes passionné et dynamique !");
+                break;
+            case 'bleu':
+                alert("Bleu : Vous êtes calme et réfléchi.");
+                if (age >= 20) { alert("Les jeunes aiment aussi le bleu !") };
+                break;
+            case 'vert':
+                alert("Vert : Vous aimez la nature et la tranquillité.");
+                break;
+
+            default:
+                alert("Couleur non reconnue !");
+        }
+
+        // Exercice 7
+
+        // let chiffre = prompt("Choissisez un chiffre entre 1 et 5");
+
+        // switch (chiffre) {
+        //     case "1":
+        //         alert("Aujourd'hui est votre jour de chance !");
+        //         break;
+        //     case "2":
+        //         alert("Un ami vous rendra visite bientôt.");
+        //         break;
+        //     case "3":
+        //         alert("Soyez prudent dans vos choix aujourd'hui.");
+        //         break;
+        //     case "4":
+        //         alert("Une surprise vous attend au coin de la rue.");
+        //         break;
+        //     case "5":
+        //         alert("Restez positif, le meilleur est à venir !");
+        //         break;
+        //     default:
+        //         alert("Chiffre invalide. Essayez entre 1 et 5.");
+        // }
+
+
+
+    </script>
+
+</body>
+
+</html>
