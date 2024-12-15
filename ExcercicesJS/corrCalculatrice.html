@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction excercice calculatrice</title>
+  </head>
+  <body>
+    <script>
+      let str1, str2, str3, n1, n2, res;
+
+      str1 = prompt("Veuillez saisir le 1er nombre : ");
+      n1 = parseFloat(str1.replace(",", "."));
+      str2 = prompt("Veuillez saisir le 2ème nombre : ");
+      n2 = parseFloat(str2.replace(",", "."));
+      str3 = prompt("Veuillez saisir l'operation parmi : + - * ou / : ");
+
+      if (isNaN(n1) || isNaN(n2)) {
+        alert("Veuillez entrer un nombre valide");
+      } else if (str3 === "+") {
+        res = n1 + n2;
+        alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+      } else if (str3 === "-") {
+        res = n1 - n2;
+        alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+      } else if (str3 === "*") {
+        res = n1 * n2;
+        alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+      } else if (str3 === "/") {
+        if (n2 == 0) {
+          alert("Vous ne pouvez pas diviser par zéro !");
+        } else {
+          res = n1 / n2;
+          alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+        }
+      }
+    </script>
+  </body>
+</html>

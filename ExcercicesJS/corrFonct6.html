@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correction Excercice 6 les fonctions</title>
+  </head>
+  <body>
+    <script>
+      //Excercice 6
+      /*
+      ------ Première manière avec "for ... of"
+
+      function trouverMax(table) {
+        let max = table[0];
+        for (let nombre of table) {
+          if (nombre > max) {
+            max = nombre;
+          }
+        }
+        return console.log("La plus grande valeur est : ", max);
+      }
+       
+      //------- Deuxième manière : Avec "for ... in"
+      function trouverMax(table) {
+        let max = table[0];
+        for (let i in table) {
+          if (table[i] > max) {
+            max = table[i];
+          }
+        }
+        return console.log("La plus grande valeur est : ", max);
+      }
+      trouverMax([10, 5, 44, 7]);
+*/
+
+      // ----- Troisième manière avec forEach
+
+      function trouverMax(tableau) {
+        let max = tableau[0];
+        tableau.forEach((valeur) => {
+          if (valeur > max) {
+            max = valeur;
+          }
+        });
+        return max;
+      }
+      console.log(
+        "La plus grande valeur est : ",
+        trouverMax([142, 353, 35, 373, 8, 9])
+      );
+
+      // -------- 4e manière en utilisant "Math.max"
+      /*
+      function trouverMax(tableau) {
+        return Math.max(...tableau); // ... la décomposition du tableau
+      }
+      console.log(...[10, 5, 44, 7]);
+      //trouverMax(...[10, 5, 44, 7]);
+      trouverMax([4, 5, 77, 65]);
+
+
+      // ----- En utilisant la Fonction fléchée
+      //let trouverMax = (tableau) => Math.max(...tableau);
+      //console.log(trouverMax([10, 5, 44, 7]));
+      */
+    </script>
+  </body>
+</html>

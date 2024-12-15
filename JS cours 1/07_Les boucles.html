@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les boucles en Js</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>Les boucles en JS</h1>");
+      // Une boucle est une structure conditionnelle qui permet de répéter un certain nombre de fois de code, jusqu'a ce qu'un test ne soit plus vrai.
+      /*
+          Il existe deux type de boucles :
+          - La boucle "for" qui permet de répéter du code lorsqu'on sait d'avance combien de fois il faudra le  répéter.
+          - La boucle "While" permet de répéter du code autant de fois jusqu'au une condition ne soit plus vraie.
+          */
+      /*
+-----------------------------------------
+-------------- La boucle for -------------
+---------------------------------------
+*/
+      document.write("<h2>La boucle for</h2>");
+      /*
+          Syntaxe
+          for (3 arguments : initialisation ; condition de continuation de la boucle ; incrementation)
+          {
+             le code à exécuter ;
+          }
+          */
+
+      for (let i = 0; i <= 10; i++) {
+        //code à exécuter
+        document.write(`<p>Instruction exécutée i = ${i}</p>`);
+        /*
+          i = 0 -> j'initialise le départ de la boucle à 0
+          i <= 10 -> tant que la valeur de i est inférieur ou égal à 10
+          i ++ -> j'incrémente un tour de boucle
+
+          En gros je donne l'instruction de faire un tour de boucle supplémentaire
+          */
+      }
+      document.write("<hr>");
+      for (let i = 0; i <= 10; i += 2) {
+        document.write(`Je compte deux par deux, i = ${i} <br>`);
+      }
+
+      //Je boucle sur un tableau
+      let users = ["Hawa", "Andrea", "Alpha", "Islem", "Roger"];
+      //   console.log(users[0]);
+      //   console.log(users.length); // length est une propriété
+
+      for (
+        let i = 0;
+        i < users.length;
+        i++ // ou i<=users.length -1
+      ) {
+        document.write(`<p> ${users[i]} </p>`);
+      }
+
+      // La boucle for est recommandée pour le tableau
+      document.write("<hr>");
+      /*
+-----------------------------------------
+-------------- La boucle While -------------
+---------------------------------------
+*/
+      document.write("<h2>La boucle While</h2>");
+      let i = 0; // j'initialise une variable à 0
+      while (i <= 5) {
+        //tant que i<=5
+        document.write(i + "/");
+        // Attention à ne pas oublier l'incrémentation
+        i++; //à chaque tour de la boucle j'incrémente la variable i
+      }
+    </script>
+  </body>
+</html>

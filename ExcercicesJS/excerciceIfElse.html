@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>correction if else</title>
+  </head>
+  <body>
+    <script>
+      //Excercice 1 : vérification de majorité
+
+      let age2;
+      age2 = parseInt(prompt("Veuillez entrer votre âge :", 18));
+      //age2 = prompt("Veuillez entrer votre âge :", 18);
+      //age2 = Number(age2); // de préférence dans le cas des prix ou on peut utiliser cette manière d'entrer les données : 12.5
+      if (isNaN(age2) || age2 <= 0) {
+        alert("Veuillez entrer un age valide");
+      } else if (age2 >= 18) {
+        alert("Vous êtes majeur !");
+      } else {
+        alert("Vous êtes mineur !");
+      }
+    </script>
+  </body>
+</html>

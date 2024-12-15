@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercices entrainement JS</title>
+  </head>
+  <body>
+    <h1>Excercices les Fonctions JS</h1>
+    <script>
+      //Excercice 1 : Fonction de Salutation
+
+      function salutation(prenom) {
+        console.log(`Bonjour ${prenom}`);
+      }
+      salutation("Islem");
+      salutation("Alex");
+      salutation("Yacine");
+
+      // Excercice 2:
+      function somme(nbr1, nbr2) {
+        console.log(`La somme de ${nbr1} et de ${nbr2} est :`, nbr1 + nbr2);
+      }
+      somme(1, 9);
+
+      //Excercice 3 :
+      function estPair(nombre) {
+        if (nombre % 2 == 0) {
+          console.log(`${nombre} : ce nombre est pair`);
+        } else;
+        {
+          console.log(`${nombre} : ce nombre est impair`);
+        }
+      }
+      //call function
+      estPair(45);
+      estPair(8);
+
+      //Excercice 4:
+      function compterVoyelles(nom) {
+        let voyelles = ["a", "e", "o", "i", "u", "y"];
+        let compteur = 0;
+
+        for (let i of nom) {
+          if (voyelles.includes(i.toLowerCase())) {
+            compteur++;
+          }
+        }
+        return compteur;
+      }
+      console.log(compterVoyelles("Islem"));
+
+      // Excercice 5
+
+      function inverserChaine(string) {
+        let reverse;
+        reverse = string.split("");
+        reverse.reverse();
+        return console.log(reverse.join(""));
+      }
+
+      inverserChaine("Islem");
+
+      //Excercice 6
+      function trouverMax(table) {
+        let max = 0;
+        for (i in table) {
+          if (table[i] > max) {
+            max = table[i];
+          }
+        }
+        return console.log("La plus grande valeur est : ", max);
+      }
+      trouverMax([10, 5, 44, 7]);
+    </script>
+  </body>
+</html>
