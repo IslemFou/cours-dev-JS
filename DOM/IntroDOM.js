@@ -54,8 +54,8 @@ _______________________
 En effet, chaque page chargée dans mon navigateur a un objet "document".
 Exemple: document.write(""); --> nous permet d'afficher du contenu en JS dans ma page HTML.
 
-- L'objet "window" est un objet qui correspond à la fenêtre dans laquelles'affiche une page web. 
--Window est le parent de chaque objet qui compose la page web? il contient donc:
+- L'objet "window" est un objet qui correspond à la fenêtre dans laquelle s'affiche une page web. 
+-Window est le parent de chaque objet qui compose la page web il contient donc:
 -> L'objet "document": la page
 -> L'objet "location": le lieu de stockage de la page
 -> l'objet "history": les pages visitée prcédemment
