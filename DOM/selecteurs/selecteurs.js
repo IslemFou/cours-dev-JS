@@ -42,7 +42,7 @@ let aChanger = document.getElementsByClassName("aChanger"); //cette variable aff
 console.log(aChanger); // HTML collection[h2.aChanger], Dans ce cas, il y a un seul tableau donc, il affiche 0:h2.aChanger
 aChanger[0].innerHTML = "Je change le titre, youhou ! ";
 
-// Sélectionner les éléments par le nom de balise
+//-------------------- Sélectionner les éléments par le nom de balise
 /*
 Je veux récuperer tous les paragraphes de notre page et on les récupères dans un tableau (array) via la méthode getElementByTagName .
 on craie une variable
@@ -93,10 +93,12 @@ let queryPara = document.querySelectorAll(".selectClass");
 console.log(queryPara); // affiche un tableau qui contient tous les parag qui portent la classe "selectClass"
 console.log(queryPara[1].innerHTML); // affiche le contenu du deuxième element
 
+//rajouter des elements
+
 let rajout = document.querySelector("div.col-4 > p.selectClass");
 rajout.innerHTML = "<span>Je sui là</span>";
 /*avec la ppté "innerHTML" on peut inclure des balises HTML.
-- Permet d'insérer du HTML dynamique, mais peut poser des risques de sécurité si des données non sécurisée sont insérer (risque d'attaque XSS : Une attaque par XSS est une injection de code malveillant dans une plateforme en ligne apparemment sûre. Les hackers injectent du code malveillant à partir des paramètres d'accès côté client pour exploiter les vulnérabilités dans les applications Web.)
+- Elle Permet d'insérer du HTML dynamique, mais peut poser des risques de sécurité si des données non sécurisée sont insérée (risque d'attaque XSS : Une attaque par XSS est une injection de code malveillant dans une plateforme en ligne apparemment sûre. Les hackers injectent du code malveillant à partir des paramètres d'accès côté client pour exploiter les vulnérabilités dans les applications Web.)
 
 */
 rajout.textContent = "<span>Je sui là</span>";
@@ -106,16 +108,17 @@ textContent permet de lire ou modifier uniquement le contenu texte d'un element 
 
 //______création d'un nouvel element HTML
 
-// Récupérer la section
+// 1- Récupérer la section
 let section = document.querySelector("section");
 console.log(section);
 /*
-Pour créer un element nous utilisons la méthode "createElement()" après nous l'intégrons dans le noeud souhaitée.
+2- Pour créer un element nous utilisons la méthode "createElement()" après nous l'intégrons dans le noeud souhaitée.
 */
 let nouveauParaFin = document.createElement("p");
 console.log(nouveauParaFin);
 nouveauParaFin.innerText =
   "CouCou, je suis ton nouveau paragraphe créer avec createElement à la fin de la section";
+//3- injection avec append
 section.append(nouveauParaFin); //insertion de l'element
 /*
 append est pour insérer du contenu à la fin de "section".
@@ -137,8 +140,8 @@ section.prepend(nouveauParaDebut); // injecte l'element et son contenu au debut 
 /*
 Pour déplacer un element ils nous faut 3 paramètres
 - Le premier, c'est le parent
-- le deuxième, l'element à déplacer
-- Le troisième paramètre, c'est l'element qui viens après
+- le deuxième, l'element c'est l'element qui viens après
+- Le troisième paramètre, l'element à déplacer
 */
 // Le parent
 let parent = document.querySelector("main"); // le main est notre parent
@@ -162,7 +165,7 @@ console.log(liste);
 //element à supprimer
 let li = document.querySelectorAll("li")[1];
 console.log(li);
-
+// suppression de item2
 liste.removeChild(li);
 // ou liste.removeChild(li[1]);
 /*
@@ -178,7 +181,7 @@ lien1.setAttribute("href", "01_introduction.html"); //changer la valeur de l'att
 console.log(lien1);
 lien1.setAttribute("class", "link-underline-danger text-warning"); //rajoute un attribut et sa valeur
 
-//--------------------------------
+//--------------- getAttribute()
 let lesA = document.querySelectorAll("a");
 console.log(lesA);
 /*
@@ -197,7 +200,7 @@ console.log(valeurA2);
 let h1 = document.getElementById("titreNiveau1");
 // Création de l'élément <a>
 let lien = document.createElement("a");
-//select2.innerText = ""; => vider le contenu du h1
+//h1.innerText = ""; => vider le contenu du h1
 // Configuration du texte du lien
 lien.textContent = "Documentation JavaScript";
 // Configuration de l'URL du lien (1ère façon)
