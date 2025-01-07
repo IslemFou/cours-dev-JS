@@ -137,7 +137,7 @@ P[1].addEventListener("click", () => {
   imageChat.classList.remove("hide");
 });
 
-//toggler(click et reclik) la classe hide
+//toggler(click et reclik) avec la classe hide
 P[2].addEventListener("click", () => {
   imageChat.classList.toggle("hide");
 });
