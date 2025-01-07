@@ -294,19 +294,42 @@ for (let button of checks) {
 
 // on fait la meme chose avec les radios
 
-let radio = document.getElementsByName("radio");
+let radio = document.getElementsByName("niveau");
 // ou .getElementByAttribute() ou .getElementByName() .querySelectorAll("input[name='langages']")
-console.log(radio);
+//console.log(radio);
 
+// Fonction pour réinitialiser les couleurs des labels
+function resetLabelColors() {
+  for (let btn of radio) {
+    btn.labels[0].style.color = ""; // Remettre la couleur par défaut
+  }
+}
 for (let button of radio) {
   button.addEventListener("change", (event) => {
+    resetLabelColors(); // Appeler la fonction de réinitialisation
     //Je vérifie la valeur du checked de l'element dans mon objet event => true si la case est cochée
-    console.log(event.target.labels[0]);
+    // console.log(event.target.value);
 
-    if (event.target.checked) {
+    /*if (button.checked) {
       event.target.labels[0].style.color = "green";
+    } else if (button.value === "enCours") {
+      event.target.labels[0].style.color = "orange";
+    } else if (button.value === "nonAcquis") {
+      event.target.labels[0].style.color = "red";
     } else {
       event.target.labels[0].style.color = "blue";
+    }*/
+
+    switch (event.target.value) {
+      case "acquis":
+        event.target.labels[0].style.color = "green";
+        break;
+      case "enCours":
+        event.target.labels[0].style.color = "orange";
+        break;
+      case "nonAcquis":
+        event.target.labels[0].style.color = "red";
+        break;
     }
   });
 }
