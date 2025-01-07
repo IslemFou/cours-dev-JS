@@ -153,6 +153,160 @@ lesP[2].addEventListener("click", () => {
 //  Il est possible d'annuler ce comportement par défaut en appelant la méthode "preventDefault()" sur l'objet "event".
 */
 document.querySelector("#interdit").addEventListener("click", (event) => {
-  event.preventDefault(); //cette méthode est particulièrement utile pour éviter que la soumission d'un formulaire recharge la page
+  event.preventDefault(); //cette méthode est particulièrement utile pour éviter que la soumi ssion d'un formulaire recharge la page
   alert("interdire d'aller sur ce lien");
 });
+// empeche le comportement par défaut
+
+// ************Gestion du formulaire
+/*
+let prenom = document.querySelector("#prenom");
+console.log(prenom);
+let submit = document.querySelector("#submit");
+
+// Je récupére la valeur de l'élément input prenom
+/* en Js pour accéder à la valeur d'une zone de texte dans un formulaire on utilise la ppté "value "
+ */
+submit.addEventListener("click", (event) => {
+  event.preventDefault();
+  // création de variable pour récupérer la valeur de l'input
+  let prenomValue = prenom.value;
+  console.log(prenomValue);
+});
+
+//l'envoie du formulaire
+//deuxième façon de le faire
+let form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  //l'evenement ici est sur le formulaire
+  e.preventDefault();
+  console.log(e);
+  let prenomValue = prenom.value;
+  console.log(prenomValue);
+});
+
+//focus et blur pour les formulaires
+
+//Focus
+prenom.addEventListener("focus", () => {
+  //lorsque l'utilisateur clique à l'intérieur du champ (input prenom)
+  prenom.style.width = "350px"; // l'input s'élargit en cliquant à l'intérieur
+  console.log(prenom.style.width);
+});
+
+//blur
+prenom.addEventListener("blur", () => {
+  //lorsque l'utilisateur sorts du champ (input prenom)
+  prenom.style.width = "500px";
+});
+
+// Evenement "change"
+//L'evenement change est déclanché lorsqu'un changement de la valeur d'un élement html est relaisé par l'utilisateur
+
+const HTML = document.querySelector("#html");
+const LABEL_HTML = document.querySelector("#labelHtml");
+HTML.addEventListener("change", (event) => {
+  console.log(HTML.cheched);
+  if (event.target.checked) {
+    // ou (HTML.checked)
+    //document.querySelector("#labelHtml").style.color = "red";
+    //ou
+    //LABEL_HTML.style.color = "green"; // autre manière d'écrire
+    //ou
+    //labelHtml.style.color = "grey"; // directement le nom de l'id
+    //ou
+    //event.target.style.backgroundColor = "pink"; //ici on change le backgroundColor de l'element input
+    //ou
+    //event.target.nextElementSibling.style.color = "aquamarine"; // ici je change la couleur de l'element label à partir de l'element input
+  } else {
+    document.querySelector("#labelHtml").style.color = "blue";
+    // event.target.style.backgroundColor = "white";
+  }
+});
+
+//on refait la meme chose pour les autres cases à cocher CSS et JS
+
+// appliquer le changement sur l'input CSS
+
+const MONCSS = document.querySelector("#CSS");
+const LABEL_CSS = document.querySelector("#labelCSS");
+MONCSS.addEventListener("change", (event) => {
+  console.log(MONCSS.cheched);
+  if (event.target.checked) {
+    // ou (MONCSS.checked)
+    //document.querySelector("#labelCSS").style.color = "red";
+    //ou
+    //LABEL_CSS.style.color = "green"; // autre manière d'écrire
+    //ou
+    //labelCSS.style.color = "grey"; // directement le nom de l'id
+    //ou
+    //event.target.style.backgroundColor = "pink"; //ici on change le backgroundColor de l'element input
+    //ou
+    //event.target.nextElementSibling.style.color = "aquamarine"; // ici je change la couleur de l'element label à partir de l'element input
+  } else {
+    document.querySelector("#labelCSS").style.color = "blue";
+    //event.target.style.backgroundColor = "white";
+  }
+});
+
+// application sur l'input JS
+const MONJS = document.querySelector("#JS");
+const LABEL_JS = document.querySelector("#labelJS");
+MONJS.addEventListener("change", (event) => {
+  //console.log(MONJS.cheched);
+  if (event.target.checked) {
+    // ou (MONJS.checked)
+    //document.querySelector("#labelJS").style.color = "red";
+    //ou
+    //LABEL_JS.style.color = "green"; // autre manière d'écrire
+    //ou
+    //labelJS.style.color = "grey"; // directement le nom de l'id
+    //ou
+    // event.target.style.backgroundColor = "pink"; //ici on change le backgroundColor de l'element input
+    //ou
+    //event.target.nextElementSibling.style.color = "aquamarine"; // ici je change la couleur de l'element label à partir de l'element input
+  } else {
+    document.querySelector("#labelJS").style.color = "blue";
+    // event.target.style.backgroundColor = "white";
+  }
+});
+
+//--------------------------------------------------------
+//------------------ Deuxième méthode ----------------
+//--------------------------------------------------------
+// l'utilisation d'une boucle
+let checks = document.getElementsByName("Langages");
+// ou .getElementByAttribute() ou .getElementByName() .querySelectorAll("input[name='langages']")
+console.log(checks);
+
+for (let button of checks) {
+  button.addEventListener("change", (event) => {
+    //Je vérifie la valeur du checked de l'element dans mon objet event => true si la case est cochée
+    console.log(event.target.labels[0]);
+
+    if (event.target.checked) {
+      event.target.labels[0].style.color = "red";
+    } else {
+      event.target.labels[0].style.color = "blue";
+    }
+  });
+}
+
+// on fait la meme chose avec les radios
+
+let radio = document.getElementsByName("radio");
+// ou .getElementByAttribute() ou .getElementByName() .querySelectorAll("input[name='langages']")
+console.log(radio);
+
+for (let button of radio) {
+  button.addEventListener("change", (event) => {
+    //Je vérifie la valeur du checked de l'element dans mon objet event => true si la case est cochée
+    console.log(event.target.labels[0]);
+
+    if (event.target.checked) {
+      event.target.labels[0].style.color = "green";
+    } else {
+      event.target.labels[0].style.color = "blue";
+    }
+  });
+}
