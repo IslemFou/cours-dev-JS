@@ -131,13 +131,48 @@ for (let button of checks)
     button.addEventListener("change", (event) =>
     {
         console.log(event.target.labels[0]);
-        /*if (event.target.checked)
+       if (event.target.checked)
         {
            event.target.labels[0].style.color = "red"; 
         } else
         {
             event.target.labels[0].style.color ="green";
         }
-        */
+    });
+}
+
+// radio
+//les radio
+let radio = document.getElementsByName("niveau");
+console.log(radio);
+
+
+//création d'une fonction pour réinitialiser les couleurs des labels
+function resetLabelColor()
+{
+    for (let btn of radio)
+    {
+        btn.labels[0].style.color = "";
+    }
+}
+
+//
+for (let button of radio)
+{
+    button.addEventListener("change", (event)=>
+    {
+        resetLabelColor();
+        switch (event.target.value)
+        {
+            case "acquis":
+                event.target.labels[0].style.color ="green";
+            break;
+            case "enCours":
+                event.target.labels[0].style.color ="orange";
+            break;
+            case "nonAcquis":
+                event.target.labels[0].style.color = "red";
+            break;
+        }
     });
 }
